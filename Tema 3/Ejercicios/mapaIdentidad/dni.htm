@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNI nombres</title>
+    <script>
+      const mapaDniNombres = new Map();
+
+      // Agregar elementos al Map utilizando el método set
+      mapaDniNombres.set("12345678A", "Juan Pérez");
+      mapaDniNombres.set("23456789B", "María Rodríguez");
+      mapaDniNombres.set("34567890C", "Pedro Sánchez");
+      mapaDniNombres.set("45678901D", "Gary Vaca");
+      mapaDniNombres.set("56789012E", "Jurek López");
+
+      console.log(mapaDniNombres);
+
+      // Agregar un nuevo elemento al Map utilizando el método set
+      mapaDniNombres.set("567892342X", "Andres Parra");
+      console.log(mapaDniNombres);
+
+      // Sobreescribir el tercer elemento
+      mapaDniNombres.set("34567890C", "Mariano Rajoy");
+      console.log(mapaDniNombres);
+
+      // Elementos sueltos
+
+      for (const elemento of mapaDniNombres) {
+        console.log(elemento)
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>

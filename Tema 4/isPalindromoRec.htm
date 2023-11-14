@@ -1,0 +1,21 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Palidromo</title>
+		<script>
+			const palindromo = (cadena) => {
+				if (cadena.length <= 1) {
+					return true;
+				} else if (cadena[0].toLower !== cadena[cadena.length - 1].toLower) {
+					return false;
+				} else {
+					return palindromo(cadena.slice(1, -1));
+				}
+			};
+
+			console.log(palindromo("HooH"));
+		</script>
+	</head>
+	<body></body>
+</html>

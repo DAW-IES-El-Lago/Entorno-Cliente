@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiador de Colores</title>
+    <style>
+        /* Estilo inicial del elemento */
+        #elemento {
+            width: 100px;
+            height: 100px;
+            background-color: #F39C12; /* Naranja */
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambiador de Colores</h1>
+    <div>
+        <label for="colores">Selecciona un color:</label>
+        <select id="colores">
+            <option value="#F39C12">Naranja</option>
+            <option value="#C0F312">Lima</option>
+            <option value="#12F3E5">Turquesa</option>
+            <option value="#F312AF">Rosa</option>
+            <option value="#F31212">Rojo</option>
+        </select>
+        <button onclick="cambiarColor()">Cambiar Color</button>
+    </div>
+    <div id="elemento"></div>
+
+    <script>
+        function cambiarColor() {
+            // Obtener el valor seleccionado en el menú desplegable
+            const seleccion = document.getElementById("colores");
+            const colorSeleccionado = seleccion.value;
+
+            // Cambiar el color de fondo del elemento
+            const elemento = document.getElementById("elemento");
+            elemento.style.backgroundColor = colorSeleccionado;
+        }
+    </script>
+</body>
+</html>

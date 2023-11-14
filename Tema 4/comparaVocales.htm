@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Compara Vocales</title>
+		<script>
+			// Definir las vocales como una constante para una fácil referencia
+			const vocales = "aeiouAEIOU";
+
+			// Función para contar el número de vocales en una cadena
+			function contarVocales(cadena) {
+				let totalVocales = 0; // Inicializar el contador de vocales
+				for (let i = 0; i < cadena.length; i++) {
+					// Verificar si el carácter actual está en la lista de vocales y aumentar el contador en consecuencia
+					if (vocales.includes(cadena[i])) {
+						totalVocales++;
+					}
+				}
+				return totalVocales; // Devolver el número total de vocales en la cadena
+			}
+
+			// Definir las cadenas de ejemplo
+			const cadena1 = "Hola mundo cruel";
+			const cadena2 = "Hola mundo";
+
+			// Función para comparar el número de vocales en dos cadenas
+			const compararCadenas = (c1, c2) =>
+				contarVocales(c1) >= contarVocales(c2);
+
+			// Mostrar el resultado en la consola
+			console.log(compararCadenas(cadena1, cadena2));
+		</script>
+	</head>
+	<body></body>
+</html>

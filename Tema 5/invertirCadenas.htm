@@ -1,0 +1,23 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Invertir Cadenas</title>
+		<script>
+			const invertirCadena = (cadena) => {
+				let arrayCadena = cadena.split("");
+				for (let i = 0; i < arrayCadena.length / 2; i++) {
+					let aux = arrayCadena[i];
+					arrayCadena[i] = arrayCadena[arrayCadena.length - 1 - i];
+					arrayCadena[arrayCadena.length - 1 - i] = aux;
+				}
+				return arrayCadena.join("");
+			};
+
+			console.log(
+				invertirCadena("Maldita SEAAAAAAAAAAAAs perry el Ornitorrinco"),
+			);
+		</script>
+	</head>
+	<body></body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td{
+            border:1px solid black;
+        }
+    </style>
+
+    <script>
+
+        /// Pide al usuario el número de columnas, ancho y alto de las celdas
+        //var numColumnas = parseInt(prompt("Ingrese el número de columnas:"));
+        
+        var tam = prompt("Ingrese el tamaño de las celdas (en píxeles):");
+
+        // Comienza la creación de la tabla y la fila
+        document.write("<table border='1'><tr>");
+
+        // Bucle para crear las columnas
+        document.write("<table>");
+        for (var i = 0; i < 8; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < 8; j++) {
+                var estilo = (i+j) % 2 != 0 ? "green" : "black;";
+                console.log(estilo);
+                var celda = `<td style="height: ${tam}px; width: ${tam}px; background-color: ${estilo}"></td>`;
+                document.write(celda);
+                
+
+            }
+            document.write("</tr>");
+            document.write("<br>");
+        }
+
+        // Cierra la fila y la tabla
+        document.write("</table>");
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

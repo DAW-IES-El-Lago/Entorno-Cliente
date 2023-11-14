@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Crear un conjunto vacío
+      const conjunto = new Set();
+
+      //Agregar elementos de los arrays
+      const array1 = [12, 12, 12, 14];
+      const array2 = [11, 11, 13, 15];
+      const array3 = ["i", "j", "k", "l"];
+
+      array1.forEach((element) => conjunto.add(element));
+      array2.forEach((element) => conjunto.add(element));
+      array3.forEach((element) => conjunto.add(element));
+
+      //Verificar la cantidad de elementos en el conjunto
+      const cantidadElementos = conjunto.size;
+
+      //Mostrar el conjunto
+      console.log("El conjunto contiene", cantidadElementos, "elementos.");
+      console.log("Elementos del conjunto:");
+
+      conjunto.forEach((element) => {
+        console.log(element);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

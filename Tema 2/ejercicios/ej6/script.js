@@ -1,0 +1,35 @@
+// Pedir al usuario la inicial del día de la semana
+const diaSemana = prompt("Introduce la inicial del día de la semana (L, M, X, J, V, S, D):");
+
+// Inicializar la variable para almacenar el horario
+let horario;
+
+// Usar un switch para determinar el horario según el día de la semana
+switch (diaSemana) {
+    case "L":
+        horario = "9:00 AM - 5:00 PM";
+        break;
+    case "M":
+        horario = "10:00 AM - 6:00 PM";
+        break;
+    case "X":
+        horario = "8:30 AM - 4:30 PM";
+        break;
+    case "J":
+        horario = "9:30 AM - 5:30 PM";
+        break;
+    case "V":
+        horario = "8:00 AM - 4:00 PM";
+        break;
+    case "S":
+        horario = "10:00 AM - 2:00 PM";
+        break;
+    case "D":
+        horario = "Cerrado";
+        break;
+    default:
+        horario = "Día no válido";
+}
+
+// Mostrar el horario por consola
+console.log(`El horario de apertura para el día ${diaSemana} es: ${horario}`);

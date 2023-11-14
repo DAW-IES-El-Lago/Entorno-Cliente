@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+
+    const numCajas = 15;
+    var r, g, b;
+    function iniciar() {
+        var column = 1;
+        var fila = 1;
+        var idCajas;
+
+
+        ;
+
+        for (i = 0; i < numCajas; i++) {
+
+            document.addEventListener('click', crearCaja);
+            document.addEventListener('click', cambioColor);
+        }
+
+
+    }
+    function crearNodo(tipo) {
+        var nodo = document.createElement(tipo);
+        nodo = document.body.appendChild(nodo);
+        return nodo;
+    }
+
+
+    function rgb() {
+        return Math.floor(Math.random() * 256);
+    }
+    function cambioColor() {
+        for (j = 0; j < numCajas; j++) {
+            document.getElementsByTagName('div')[j].style.backgroundColor = 'rgb(' + rgb() + ',' + rgb() + ',' + rgb() + ')';
+        }
+
+    }
+
+    function crearCaja() {
+        var caja = crearNodo('div');
+        caja.style.backgroundColor = 'rgb(' + rgb() + ',' + rgb() + ',' + rgb() + ')';
+
+        caja.style.height = "180px";
+        caja.style.width = "90px";
+        caja.style.float = "left";
+        caja.style.border = "outset black  10px";//tamaño borde
+
+
+        //texto en el centro
+        caja.style.display = "flex";
+        caja.style.justifyContent = "center";
+        caja.style.alignItems = "center";
+        //texto en el centro
+
+
+        caja.style.fontFamily = "monospace";// fuente de la letra
+        caja.style.fontSize = "200%";//tamaño letra
+        caja.style.color = "white"; //color letra
+
+
+
+        caja.innerHTML =j-1;
+
+        caja.style.margin = "3px";
+
+        if (j == 1) {
+            caja.style.clear = "left";
+            fila += 1;
+            column = 1;
+        }
+        if (j == 3) {
+            caja.style.clear = "left";
+            fila += 2;
+            column = 2;
+        }
+        if (j == 7) {
+            caja.style.clear = "left";
+
+            fila += 3;
+            column = 4;
+        }
+        if (j == 14) {
+            document.addEventListener('click', resetCajas);
+        }
+
+
+
+        column += 1;
+        idCajas = caja.id;
+    }
+
+    function resetCajas(){ 
+
+    location.reload();
+    console.log("pito");    
+    }
+
+
+    window.onload = iniciar;
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

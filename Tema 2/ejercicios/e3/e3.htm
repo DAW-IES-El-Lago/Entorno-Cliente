@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E3</title>
+    <script>
+      var name = prompt("Introduce tu nombre: ");
+
+      var quit = confirm("Deseas finalizar el programa? (Y/n)");
+
+      if (quit == 0) {
+        alert("Has declinado la solicitud de abandonar el programa.");
+      } else {
+        alert("Has aceptado la solicitud de abandonar el programa.");
+      }
+
+      console.log(
+        "%c%s",
+        "color: blue; font-weight: bold; text-decoration: underline;",
+        "FIN DEL PROGRAMA"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

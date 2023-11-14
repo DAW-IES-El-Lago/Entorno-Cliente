@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenar Map</title>
+    <script>
+      
+      const miMap = new Map();
+
+      miMap.set("Z", "Zeta");
+      miMap.set("A", "Alfa");
+      miMap.set("C", "Charlie");
+      miMap.set("B", "Bravo");
+
+      console.log("Map original:");
+      console.log(miMap);
+      
+      //Crear un array de entradas del Map
+      const arrayDeEntradas = Array.from(miMap.entries());
+      console.log(arrayDeEntradas)
+
+      //Ordenar el array de entradas por valores (segundo elemento de cada entrada)
+      arrayDeEntradas.sort(function (a, b) {
+        const valorA = a[1];
+        const valorB = b[1];
+        return valorA.localeCompare(valorB);
+      });
+
+      //Crear un nuevo Map a partir del array ordenado
+      const mapOrdenado = new Map(arrayDeEntradas);
+
+      console.log("Map ordenado por valores:");
+      console.log(mapOrdenado);
+    </script>
+  </head>
+  <body></body>
+</html>

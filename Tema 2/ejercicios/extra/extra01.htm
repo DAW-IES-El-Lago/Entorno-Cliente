@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>extra 01</title>
+    <script>
+      // Pedir al usuario que ingrese dos números
+      const numero1 = parseFloat(prompt("Ingresa el primer número:"));
+      const numero2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+      // Comprobar si número1 no es mayor que número2
+      if (!(numero1 > numero2)) {
+        console.log("Número1 no es mayor que número2.");
+      }
+
+      // Comprobar si número2 es positivo
+      if (numero2 > 0) {
+        console.log("Número2 es positivo.");
+      }
+
+      // Comprobar si número1 es negativo o distinto de cero
+      if (numero1 < 0 || numero1 !== 0) {
+        console.log("Número1 es negativo o distinto de cero.");
+      }
+
+      // Comprobar si incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2
+      if (numero1 + 1 >= numero2) {
+        console.log(
+          "Incrementar en 1 unidad el valor de número1 lo hace mayor o igual que número2."
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

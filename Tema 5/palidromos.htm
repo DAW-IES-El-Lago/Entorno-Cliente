@@ -1,0 +1,30 @@
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Palindromo</title>
+		<script>
+			const esPalindromo = (cadena) => {
+				cadena = eliminarEspacios(cadena);
+				if (cadena.length <= 1) {
+					return true;
+				} else if (
+					cadena[0].toLowerCase() !== cadena[cadena.length - 1].toLowerCase()
+				) {
+					return false;
+				} else {
+					return esPalindromo(cadena.slice(1, -1));
+				}
+			};
+
+			const eliminarEspacios = (cadena) => {
+				var newCadena = cadena.split(" ");
+				return newCadena.join("");
+			};
+
+			console.log(esPalindromo("ojo rojo"));
+		</script>
+	</head>
+	<body></body>
+</html>
+//estructura, array, map, set, objetos...

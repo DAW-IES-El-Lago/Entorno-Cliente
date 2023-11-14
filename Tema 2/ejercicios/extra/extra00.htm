@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generador de Encabezados</title>
+  </head>
+  <body>
+    <script>
+      // Solicita al usuario un número del 1 al 6
+      var numero = parseInt(prompt("Por favor, ingresa un número del 1 al 6:"));
+
+      // Comprueba si el número está en el rango válido (1-6)
+      if (numero >= 1 && numero <= 6) {
+        // Crea un encabezado HTML con el tamaño indicado y muestra el resultado
+        var encabezadoHTML = "<h" + numero + ">Encabezado de tamaño " + numero + "</h" + numero + ">";
+        document.write(encabezadoHTML);
+      } else {
+        // Muestra un mensaje si el número no está en el rango válido
+        alert(
+          "No existe ese tipo de encabezado. Por favor, ingresa un número del 1 al 6."
+        );
+      }
+    </script>
+  </body>
+</html>

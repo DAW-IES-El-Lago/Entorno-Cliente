@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 100vh;
+				margin: 0;
+			}
+
+			h1 {
+				margin-bottom: 20px;
+			}
+
+			table {
+				font-family: Arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+				margin-top: 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			td,
+			th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>COCHES DE MELAKU</h1>
+		<table id="carTable">
+			<tr>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Año</th>
+				<th>Color</th>
+				<th>Precio</th>
+				<th>Motor</th>
+			</tr>
+		</table>
+
+		<script>
+			class Coche {
+				constructor(marca, modelo, año, color, precio, motor) {
+					this.marca = marca;
+					this.modelo = modelo;
+					this.año = año;
+					this.color = color;
+					this.precio = precio;
+					this.motor = motor;
+				}
+
+				pintar() {
+					var nuevoColor = prompt(
+						'Introduce el color para pintar el coche ' +
+							this.marca +
+							' ' +
+							this.modelo +
+							':',
+					);
+					this.color = nuevoColor;
+				}
+			}
+
+			// Crear instancias de coches
+			var coche1 = new Coche(
+				'Mercedes',
+				'S-Class',
+				2023,
+				'',
+				'$100,000',
+				'V8 Twin-Turbo',
+			);
+			var coche2 = new Coche(
+				'Ferrari',
+				'LaFerrari',
+				2023,
+				'',
+				'$1,500,000',
+				'V12',
+			);
+
+			// Pintar un coche
+			coche1.pintar();
+			coche2.pintar();
+
+			// Obtener la referencia de la tabla en el DOM
+			var tableRef = document.getElementById('carTable');
+
+			// Función para agregar fila a la tabla
+			function agregarFila(coche) {
+				var newRow = tableRef.insertRow();
+				var newCell1 = newRow.insertCell(0);
+				var newCell2 = newRow.insertCell(1);
+				var newCell3 = newRow.insertCell(2);
+				var newCell4 = newRow.insertCell(3);
+				var newCell5 = newRow.insertCell(4);
+				var newCell6 = newRow.insertCell(5);
+
+				newCell1.appendChild(document.createTextNode(coche.marca));
+				newCell2.appendChild(document.createTextNode(coche.modelo));
+				newCell3.appendChild(document.createTextNode(coche.año));
+				newCell4.appendChild(document.createTextNode(coche.color));
+				newCell5.appendChild(document.createTextNode(coche.precio));
+				newCell6.appendChild(document.createTextNode(coche.motor));
+			}
+
+			// Agregar las filas de los coches a la tabla
+			agregarFila(coche1);
+			agregarFila(coche2);
+
+			// Método para mezclar aleatoriamente un array
+			Array.prototype.shuffle = function () {
+				for (let i = this.length - 1; i > 0; i--) {
+					const j = Math.floor(Math.random() * (i + 1));
+					const temp = this[i];
+					this[i] = this[j];
+					this[j] = temp;
+				}
+			};
+
+			// Ejemplo de uso del método shuffle
+			var arrayEjemplo = [coche1, coche2];
+			arrayEjemplo.shuffle();
+			console.log(arrayEjemplo);
+		</script>
+	</body>
+</html>

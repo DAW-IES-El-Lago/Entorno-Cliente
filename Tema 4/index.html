@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // Función para contar vocales en una cadena
+    const contarVocalesEnString = (str) => {
+      // Inicializar un contador para las vocales
+      let contadorVocales = 0;
+
+      // Convertir la cadena a minúsculas para una comparación sin distinción entre mayúsculas y minúsculas
+      const lowerCaseStr = str.toLowerCase();
+
+      // Iterar sobre cada carácter en la cadena
+      for (let i = 0; i < lowerCaseStr.length; i++) {
+        // Verificar si el carácter actual es una vocal y aumentar el contador en consecuencia
+        if (
+          lowerCaseStr[i] === "a" ||
+          lowerCaseStr[i] === "e" ||
+          lowerCaseStr[i] === "i" ||
+          lowerCaseStr[i] === "o" ||
+          lowerCaseStr[i] === "u"
+        ) {
+          contadorVocales++;
+        }
+      }
+
+      // Devolver el conteo total de vocales en la cadena
+      return contadorVocales;
+    };
+
+    // Función principal que compara las vocales en dos cadenas y muestra el resultado
+    const compararVocales = (str1, str2) => {
+      const vocalesEnStr1 = contarVocalesEnString(str1);
+      const vocalesEnStr2 = contarVocalesEnString(str2);
+
+      // Comparar el recuento de vocales y mostrar el resultado en la consola
+      if (vocalesEnStr1 > vocalesEnStr2) {
+        console.log(`${str1} tiene más vocales que ${str2}`);
+      } else if (vocalesEnStr2 > vocalesEnStr1) {
+        console.log(`${str2} tiene más vocales que ${str1}`);
+      } else {
+        console.log(`Ambas cadenas tienen la misma cantidad de vocales`);
+      }
+    };
+
+    // Ejemplo de uso
+    const cadena1 = "Hola amigo";
+    const cadena2 = "Buenos días";
+    compararVocales(cadena1, cadena2);
+  </script>
+  <body></body>
+</html>

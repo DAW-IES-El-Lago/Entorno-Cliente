@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = new Array(10);
+        array = [true, false, true, true, false, true, false, false, false, true];
+
+
+        var posicionesverdad = array.reduce((acumulador, valor, i) => {
+            if (valor) {
+                acumulador.push(i);
+            }
+            return acumulador;
+        }, []);
+
+        // Muestra las posiciones que contienen true
+        console.log("Posiciones que contienen true:" + posicionesverdad);
+    </script>
+</body>
+
+</html>

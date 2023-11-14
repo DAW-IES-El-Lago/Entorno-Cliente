@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>extra 03</title>
+    <script>
+      // Solicitar la nota del examen al usuario
+      const nota = parseFloat(
+        prompt("Ingresa tu nota del examen (un número entre 0 y 10):")
+      );
+
+      // Verificar si la nota es válida
+      if (isNaN(nota) || nota < 0 || nota > 10) {
+        document.write("Por favor, ingresa una nota válida entre 0 y 10.");
+      } else {
+        // Determinar la calificación
+        let calificacion;
+
+        if (nota < 5) {
+          calificacion = "Suspenso";
+        } else if (nota >= 5 && nota < 7) {
+          calificacion = "Aprobado";
+        } else if (nota >= 7 && nota < 9) {
+          calificacion = "Notable";
+        } else if (nota >= 9 && nota < 10) {
+          calificacion = "Sobresaliente";
+        } else {
+          calificacion = "Matrícula de honor";
+        }
+
+        // Mostrar la calificación en pantalla
+        document.write(`Tu calificación es: ${calificacion}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

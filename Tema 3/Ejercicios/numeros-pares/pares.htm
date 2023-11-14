@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pares</title>
+    <script>
+      let numeros = new Array(100);
+
+      for (let i = 0; i < numeros.length; i++) {
+        numeros[i] = Math.floor(Math.random() * 100);
+        if(numeros[i] % 2 == 0){
+            //aqui solo imprime los que son pares
+            document.write(numeros[i] + " | ")
+        }
+      }
+      //el arreglo completo
+      console.log(numeros);
+    </script>
+  </head>
+  <body></body>
+</html>

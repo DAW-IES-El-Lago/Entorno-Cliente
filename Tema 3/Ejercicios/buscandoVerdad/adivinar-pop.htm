@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivinar sin For</title>
+  </head>
+  <script>
+    let elementos = [true, true, false, true, true, false, false, true];
+
+    // Verificar si el primer elemento es true
+    if (elementos[0] === true) {
+      console.log("El elemento " + " es true");
+
+      // Eliminar el primer elemento del arreglo
+      elementos.splice(0, 1);
+    }
+
+    console.log(elementos); // El primer elemento se ha eliminado si era true
+  </script>
+  <body></body>
+</html>
