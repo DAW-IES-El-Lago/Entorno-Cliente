@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trigonometria</title>
+  </head>
+  <body>
+    <script>
+      function calcularTrigonometricas(anguloGrados) {
+        // Convertir el ángulo de grados a radianes
+        var anguloRadianes = anguloGrados * (Math.PI / 180);
+
+        // Calcular las funciones trigonométricas
+        var seno = Math.sin(anguloRadianes);
+        var coseno = Math.cos(anguloRadianes);
+        var tangente = Math.tan(anguloRadianes);
+
+        // Calcular las funciones inversas
+        var arcoseno = Math.asin(seno) * (180 / Math.PI); // Convertir a grados
+        var arcocoseno = Math.acos(coseno) * (180 / Math.PI); // Convertir a grados
+        var arcotangente = Math.atan(tangente) * (180 / Math.PI); // Convertir a grados
+
+        // Mostrar los resultados
+        console.log("Ángulo en grados: " + anguloGrados);
+        console.log("Seno: " + seno);
+        console.log("Coseno: " + coseno);
+        console.log("Tangente: " + tangente);
+        console.log("Arcoseno: " + arcoseno);
+        console.log("Arcocoseno: " + arcocoseno);
+        console.log("Arcotangente: " + arcotangente);
+      }
+
+      // Obtener el ángulo del usuario (en grados)
+      var anguloUsuario = parseFloat(prompt("Ingrese el ángulo en grados:"));
+
+      // Verificar si la entrada es un número válido
+      if (!isNaN(anguloUsuario)) {
+        calcularTrigonometricas(anguloUsuario);
+      } else {
+        console.log("Por favor, ingrese un número válido.");
+      }
+    </script>
+  </body>
+</html>

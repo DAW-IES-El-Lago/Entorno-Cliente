@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Validar Email Regex</title>
+	</head>
+	<body>
+		<script>
+			function validarEmail(email) {
+				// Patrón de expresión regular para validar un correo electrónico
+				var patronEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+				// Verificar si el email cumple con el patrón
+				if (patronEmail.test(email)) {
+					return true; // El email es válido
+				} else {
+					return false; // El email no es válido
+				}
+			}
+
+			// Ejemplo de uso
+			var emailIngresado = prompt(
+				"Ingrese su dirección de correo electrónico:",
+			);
+
+			if (validarEmail(emailIngresado)) {
+				console.log("El correo electrónico ingresado es válido.");
+			} else {
+				console.log("El correo electrónico ingresado no es válido.");
+			}
+		</script>
+	</body>
+</html>
