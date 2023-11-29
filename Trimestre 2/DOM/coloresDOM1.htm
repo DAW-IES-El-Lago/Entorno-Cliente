@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colores DOM</title>
+    <style>
+      #parr {
+        background-color: rgb(51, 200, 250);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="parr">Este es un párrafo.</p>
+
+    <button onclick="cambiarEstilo()">Cambiar estilo</button>
+
+    <script>
+      const randomColor = () => {
+        const color = Math.floor(Math.random() * 16777215).toString(16);
+        console.log(color);
+        return color;
+      };
+
+      function cambiarEstilo() {
+        // Obtener el elemento del párrafo por su id
+        var parrafo = document.getElementById("parr");
+
+        // Modificar el estilo del párrafo
+        color = randomColor();
+        parrafo.style.backgroundColor = `#${color}`;
+      }
+    </script>
+  </body>
+</html>

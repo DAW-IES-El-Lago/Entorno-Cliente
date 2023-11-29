@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Validar Tags Etiqueta</title>
+	</head>
+	<body>
+		<script>
+			function validarFormatoPersonalizado(cadena) {
+				// Patrón de expresión regular para validar el formato fecha-referencia/lote
+				var patronFormato = /^\d{4}-[a-zA-Z0-9]+\/[a-zA-Z0-9_]+$/;
+
+				// Verificar si la cadena cumple con el patrón 2022-xrFdS/25_9
+				if (patronFormato.test(cadena)) {
+					return true; // La cadena es válida
+				} else {
+					return false; // La cadena no es válida
+				}
+			}
+
+			// Ejemplo de uso
+			var cadenaIngresada = prompt(
+				"Ingrese una cadena con el formato fecha-referencia/lote:",
+			);
+
+			if (validarFormatoPersonalizado(cadenaIngresada)) {
+				console.log("La cadena ingresada tiene el formato válido.");
+			} else {
+				console.log("La cadena ingresada no tiene el formato válido.");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reloj con Rayas</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Estilo para los contenedores de horas, minutos y segundos */
+      .container {
+        display: inline-block;
+        width: 480px;
+        margin: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .guiones {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Horas</h2>
+      <div id="horas" class="guiones"></div>
+    </div>
+
+    <div class="container">
+      <h2>Minutos</h2>
+      <div id="minutos" class="guiones"></div>
+    </div>
+
+    <script>
+      function mostrarGuiones(cantidad, elemento) {
+        const guiones = "-".repeat(cantidad);
+        document.getElementById(elemento).innerText = guiones;
+      }
+
+      function actualizarReloj() {
+        const ahora = new Date();
+        const horas = ahora.getHours().toString().padStart(2, "0");
+        const minutos = ahora.getMinutes().toString().padStart(2, "0");
+
+        mostrarGuiones(parseInt(horas), "horas");
+        mostrarGuiones(parseInt(minutos), "minutos");
+      }
+
+      setInterval(actualizarReloj, 1000);
+      actualizarReloj();
+    </script>
+  </body>
+</html>

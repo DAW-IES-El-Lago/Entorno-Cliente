@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seleccion</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <ul>
+        <li class="item">Elemento 1</li>
+        <li class="item">Elemento 2</li>
+      </ul>
+    </div>
+    <div class="contenedor">
+      <ul>
+        <li class="item">Elemento 3</li>
+        <li class="item">Elemento 4</li>
+        <li class="item">Elemento 5</li>
+      </ul>
+    </div>
+    <script>
+      // Obtener todos los elementos con tagname
+      const listaTag = document.getElementsByTagName("li");
+      // Obtener todos los elementos con queryselector
+      const listaQuery = document.querySelectorAll("li");
+
+      // Mostrar en la consola
+      console.log(
+        "Elementos seleccionados con getElementsByTagName:",
+        listaTag
+      );
+      console.log("Elementos seleccionados con querySelectorAll:", listaQuery);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Validar Tags Etiqueta</title>
+	</head>
+	<body>
+		<script>
+			function validarNIF(nif) {
+				// Expresión regular para validar el formato de un NIF español
+				var patronNIF = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;
+
+				// Verificar si el NIF cumple con el patrón
+				if (!patronNIF.test(nif)) {
+					return false; // No cumple con el formato básico
+				}
+
+				// Extraer el número y la letra del NIF
+				var numero = nif.slice(0, 8);
+				var letra = nif.slice(8).toUpperCase();
+
+				// Array de letras de control
+				var letrasControl = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+				// Calcular la letra de control esperada
+				var letraControlEsperada = letrasControl[numero % 23];
+
+				// Verificar si la letra de control coincide
+				if (letra !== letraControlEsperada) {
+					return false; // La letra de control no es válida
+				}
+
+				return true; // El NIF es válido
+			}
+
+			// Ejemplo de uso
+			var nifIngresado = prompt("Ingrese un NIF español:");
+
+			if (validarNIF(nifIngresado)) {
+				console.log("El NIF ingresado es válido.");
+			} else {
+				console.log("El NIF ingresado no es válido.");
+			}
+		</script>
+	</body>
+</html>

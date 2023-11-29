@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora de Área de Círculo</title>
+	</head>
+	<body>
+		<script>
+			// Función para calcular el área del círculo
+			function calcularArea() {
+				// Solicitar al usuario que ingrese el radio
+				var radio = prompt("Por favor, ingrese el radio del círculo:");
+
+				// Convertir la entrada del usuario a un número
+				radio = parseFloat(radio);
+
+				// Verificar si la entrada es un número válido
+				if (isNaN(radio) || radio <= 0) {
+					alert(
+						"Por favor, ingrese un número válido y positivo para el radio.",
+					);
+					return;
+				}
+
+				// Calcular el área del círculo
+				var area = Math.PI * Math.pow(radio, 2);
+
+				// Mostrar el resultado
+				alert(
+					"El área del círculo con radio " + radio + " es: " + area.toFixed(2),
+				);
+			}
+
+			// Llamar a la función al cargar la página (puedes también llamarla mediante un botón u otro evento)
+			calcularArea();
+		</script>
+	</body>
+</html>

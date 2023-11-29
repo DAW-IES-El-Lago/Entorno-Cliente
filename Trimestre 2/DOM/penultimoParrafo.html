@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Párrafos</title>
+  </head>
+  <body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>A la verga soy el penultimo parrafo</p>
+    <p>Párrafo 5</p>
+
+    <script>
+      // Obtener todos los párrafos
+      const parrafos = document.getElementsByTagName("p");
+
+      // Obtener el contenido del penúltimo párrafo
+      const penultimoParrafo = parrafos[parrafos.length - 2].textContent;
+
+      // Mostrar en la consola
+      console.log("Contenido del penúltimo párrafo:", penultimoParrafo);
+    </script>
+  </body>
+</html>

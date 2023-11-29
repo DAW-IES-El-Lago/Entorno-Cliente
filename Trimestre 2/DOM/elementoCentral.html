@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Nodos</title>
+    <style>
+      li {
+        list-style-type: none;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .azul {
+        color: blue;
+      }
+
+      .rojo {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ol id="miLista">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ol>
+
+    <script>
+      // Obtener la lista y sus elementos
+      let lista = document.getElementById("miLista");
+      let elementos = lista.children;
+
+      // Encontrar el índice del elemento del medio
+      let indiceElementoMedio = Math.floor(elementos.length / 2);
+      let elementoMedio = elementos[indiceElementoMedio];
+
+      // Aplicar estilos al elemento anterior y posterior
+      if (indiceElementoMedio > 0) {
+        let elementoAnterior = elementoMedio.previousElementSibling;
+        elementoAnterior.classList.add("azul");
+      }
+
+      if (indiceElementoMedio < elementos.length - 1) {
+        let elementoPosterior = elementoMedio.nextElementSibling;
+        elementoPosterior.classList.add("rojo");
+      }
+    </script>
+  </body>
+</html>
