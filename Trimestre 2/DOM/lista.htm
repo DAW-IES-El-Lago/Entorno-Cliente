@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Ingredientes</title>
+		<style>
+			body {
+				font-family: 'Arial', sans-serif;
+				text-align: center;
+				margin: 50px;
+				background-color: #1e1e1e;
+				color: #d4d4d4;
+			}
+
+			#ingredientInput {
+				padding: 8px;
+				margin-right: 8px;
+				background-color: #2a2a2a;
+				color: #d4d4d4;
+				border: 1px solid #444;
+			}
+
+			#addButton {
+				padding: 8px;
+				cursor: pointer;
+				background-color: #4caf50;
+				color: #fff;
+				border: none;
+			}
+
+			#ingredientList {
+				list-style: none;
+				padding: 0;
+				margin: 20px 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#ingredientList li {
+				margin-bottom: 10px;
+				background-color: #2a2a2a;
+				padding: 12px;
+				border-radius: 5px;
+				width: 200px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lista de Ingredientes</h1>
+
+		<label for="ingredientInput">Ingrediente:</label>
+		<input
+			type="text"
+			id="ingredientInput"
+			placeholder="Ingrese un ingrediente" />
+
+		<button id="addButton">Agregar</button>
+
+		<ul id="ingredientList"></ul>
+
+		<script>
+			document
+				.getElementById('addButton')
+				.addEventListener('click', function () {
+					var ingredientInput = document.getElementById('ingredientInput');
+					var ingredientList = document.getElementById('ingredientList');
+
+					if (ingredientInput.value.trim() !== '') {
+						var newIngredient = document.createElement('li');
+						newIngredient.textContent = ingredientInput.value;
+						ingredientList.appendChild(newIngredient);
+						ingredientInput.value = '';
+					} else {
+						alert('Por favor, ingrese un ingrediente válido.');
+					}
+				});
+		</script>
+	</body>
+</html>
