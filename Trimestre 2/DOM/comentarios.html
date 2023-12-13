@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulario de Comentarios</title>
+		<style>
+			/* Estilo para el cuadro exterior */
+			#comentarios {
+				border: 2px solid #ccc;
+				padding: 10px;
+				margin: 20px;
+				border-radius: 10px;
+				transition: background-color 0.3s; /* Agregamos transición para suavizar el cambio de colores */
+			}
+
+			/* Estilo para el área de texto */
+			#areaComentario {
+				width: 100%;
+				height: 100px;
+				box-sizing: border-box;
+				margin-top: 10px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				padding: 5px;
+			}
+
+			/* Estilo para resaltar el área de texto cuando está activa */
+			#areaComentario:focus {
+				border-color: #007bff;
+				box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+				/* Cambiamos el color del cuadro exterior cuando el área está activa */
+				outline: none; /* Quitamos el borde predeterminado al enfocar */
+				background-color: #e6f7ff; /* Cambiamos el color de fondo */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="comentarios">
+			<h2>Sección de Comentarios</h2>
+			<p>Haz clic aquí para simular la sección de comentarios.</p>
+
+			<textarea
+				id="areaComentario"
+				placeholder="Escribe tu comentario..."></textarea>
+		</div>
+
+		<script>
+			// Obtén referencias a los elementos
+			var seccionComentarios = document.getElementById("areaComentario");
+
+			//listener al div de comentarios
+			seccionComentarios.addEventListener("click", function () {
+				console.log("Se ha clicado en la sección de comentarios.");
+			});
+
+			//listener al área de comentario para cambiar los colores cuando está activa
+			areaComentario.addEventListener("focus", function () {
+				document.getElementById("comentarios").style.backgroundColor =
+					"#e6f7ff"; // Cambia el color de fondo
+				document.getElementById("comentarios").style.borderColor = "#007BFF"; // Cambia el color del borde
+			});
+
+			// Agrega un listener al área de comentario para restaurar los colores cuando pierde el foco
+			areaComentario.addEventListener("blur", function () {
+				document.getElementById("comentarios").style.backgroundColor = ""; // Restaura el color de fondo predeterminado
+				document.getElementById("comentarios").style.borderColor = "#ccc"; // Restaura el color del borde predeterminado
+			});
+		</script>
+	</body>
+</html>
