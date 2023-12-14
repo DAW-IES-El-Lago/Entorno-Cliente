@@ -1,0 +1,476 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fin Reset CSS */
+
+html {
+  background: url(res/img/arena.png) no-repeat 70% 20%, url(res/img/texture.png);
+  height: 100%;
+}
+
+body {
+  background: rgb(241, 238, 203);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  min-height: 100%;
+  color: #000;
+}
+
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#main-content {
+  padding-top: 25px;
+  background: rgba(138, 138, 138, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#header {
+  overflow: hidden;
+  padding: 20px 20px 10px;
+}
+
+#header h1 {
+  float: left;
+  width: 65%;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 125, 85);
+  font-family: orbitron, arial, sans-serif;
+  text-shadow: 2px 2px 0 rgb(255, 251, 209), 3px 3px 0 rgb(255, 125, 85);
+}
+
+#header nav {
+  float: left;
+  width: 35%;
+  text-align: right;
+  font-family: georgia, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#header nav li {
+  display: inline-block;
+  padding: 0 7px;
+  border-radius: 25px;
+}
+
+#header nav li a {
+  color: rgb(91, 76, 55);
+  color: rgba(91, 76, 55, 0.8);
+  text-decoration: none;
+  display: block;
+  padding: 3px 8px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#header nav li a:hover,
+#header nav li a:active {
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+#intro {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+#intro div {
+  float: left;
+}
+
+#intro div:first-child {
+  width: 620px;
+  margin-right: 20px;
+}
+
+#intro div:first-child img {
+  padding: 15px;
+  background: #ddd;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#intro div:nth-child(2) {
+  width: 300px;
+}
+
+#intro nav {
+  position: absolute;
+  width: 220px;
+  top: 30px;
+}
+
+#intro nav li {
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+  width: 160px;
+  margin: 0 0 10px -8px;
+  background: rgb(8, 165, 155);
+  border-radius: 25px;
+}
+
+#intro nav li a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#intro nav li span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  float: right;
+}
+
+#intro nav li:nth-child(1) span {
+  background: url(res/img/pizza.png) no-repeat right center;
+}
+
+#intro nav li:nth-child(2) {
+  background: rgb(224, 80, 35);
+}
+
+#intro nav li:nth-child(2):before {
+  border-color: transparent rgb(224, 80, 35);
+}
+
+#intro nav li:nth-child(2) span {
+  background: url(res/img/camiseta.png) no-repeat right center;
+}
+
+#intro nav li:nth-child(3) {
+  background: rgb(238, 165, 27);
+}
+
+#intro nav li:nth-child(3):before {
+  border-color: transparent rgb(238, 165, 27);
+}
+
+#intro nav li:nth-child(3) span {
+  background: url(res/img/vader.png) no-repeat right center;
+}
+
+#intro nav li:nth-child(4) {
+  background: rgb(94, 79, 58);
+}
+
+#intro nav li:nth-child(4):before {
+  border-color: transparent rgb(94, 79, 58);
+}
+
+#intro nav li:nth-child(4) span {
+  background: url(res/img/nucelar.png) no-repeat right center;
+}
+
+#intro nav li:nth-child(5) {
+  background: rgb(173, 165, 53);
+}
+
+#intro nav li:nth-child(5):before {
+  border-color: transparent rgb(173, 165, 53);
+}
+
+#intro nav li:nth-child(5) span {
+  background: url(res/img/tirita.png) no-repeat right center;
+}
+
+#intro nav li:hover {
+  width: 220px;
+}
+
+#intro h2 {
+  font-size: 32px;
+  line-height: 33px;
+  color: rgb(255, 125, 85);
+  font-family: orbitron, arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+#intro p {
+  margin-bottom: 20px;
+}
+
+#intro .boton {
+  display: block;
+  padding: 13px 10px 10px;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 30px;
+  background: rgb(231, 94, 53);
+  border-radius: 50px;
+}
+
+#intro .boton:hover {
+  bottom: 1px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#posts {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+#posts article {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+
+#posts article:last-child {
+  margin-right: 0;
+}
+
+#posts article figure {
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 0;
+}
+
+#posts article img {
+  padding: 10px;
+  background: #ddd;
+}
+
+#posts article figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #000;
+  padding: 5px 20px;
+  width: 240px;
+  display: block;
+  color: #fff;
+  line-height: 20px;
+}
+
+#posts article h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: rgb(255, 125, 85);
+}
+
+.contains-vid {
+  background: #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+video {
+  width: 280px;
+  height: 100px;
+  display: block;
+  background: #000;
+  color: #fff;
+}
+
+aside {
+  background: #bcbaaa;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px 20px;
+  overflow: hidden;
+}
+
+aside h2 {
+  display: inline-block;
+  width: 296px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-style: italic;
+  vertical-align: super;
+  color: rgb(255, 125, 85);
+  font-family: georgia, arial, sans-serif;
+}
+
+aside form {
+  display: inline-block;
+}
+
+aside fieldset {
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+}
+
+aside fieldset label {
+  display: block;
+}
+
+aside input[type="text"],
+aside input[type="date"] {
+  color: #666;
+  padding: 5px;
+  width: 204px;
+  font-size: 14px;
+  border: 1px solid #9e9b84;
+  background: rgb(241, 238, 203);
+  border-radius: 5px;
+}
+
+aside fieldset:last-of-type {
+  width: 140px;
+  margin-right: 0;
+}
+
+aside input[type="submit"] {
+  width: 140px;
+  margin-top: 20px;
+  padding: 4px 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #e5633b;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #cb4c25;
+  cursor: pointer;
+  background: rgb(174, 59, 23);
+}
+
+fieldset input[type="submit"]:hover {
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}

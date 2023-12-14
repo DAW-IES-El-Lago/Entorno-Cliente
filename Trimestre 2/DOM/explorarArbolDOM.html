@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Explorar Arbol DOM</title>
+  </head>
+
+  <body>
+    <p id="otro-parrafo">
+      <em>Este</em> es un parrafo con un <strong>elemento destacado</strong> en
+      su interior
+    </p>
+
+    <script>
+      //parrafo
+      const parrafo = document.getElementById("otro-parrafo");
+
+      //Seleccionar el parrafo
+      console.log(`elementos otro parrafo: ${parrafo.textContent}`);
+
+      //Seleccionar el primer hijo
+      console.log(`Primer Hijo: ${parrafo.firstElementChild}`);
+
+      //Seleccionar el ultimo hijo
+      console.log(`Ultimo Hijo: ${parrafo.last}`);
+
+      //Seleccionar el hermano posterior del elemento em
+      console.log(
+        `Hermano posterior de <em>: ${
+          document.getElementsByTagName("em")[0].nextElementSibling.textContent
+        }`
+      );
+
+      //Seleccionar el hermano anterior del elemento strong
+      console.log(
+        `Hermano anterior de <strong>: ${
+          document.getElementsByTagName("strong")[0].previousElementSibling
+            .textContent
+        }`
+      );
+    </script>
+  </body>
+</html>

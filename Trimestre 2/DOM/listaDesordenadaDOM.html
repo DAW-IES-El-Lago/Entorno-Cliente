@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Lista</title>
+    </head>
+    <body>
+      <script>
+        // Pedir elementos para añadir a una lista en el DOM de HTML con prompt
+
+        let lista = [];
+
+        function añadir() {
+          let elemento = prompt("Introduce un elemento");
+
+          if (elemento !== null && elemento !== "") {
+            lista.push(elemento);
+
+            // Limpiar la lista actual antes de agregar los nuevos elementos
+            document.getElementById("lista").innerHTML = "";
+
+            lista.forEach((elemento) => {
+              let newNode = document.createElement("li");
+              newNode.innerHTML = elemento;
+              document.getElementById("lista").appendChild(newNode);
+            });
+          }
+        }
+      </script>
+      <button onclick="añadir()">Pedir</button>
+      <ul id="lista"></ul>
+    </body>
+  </html>
+</html>

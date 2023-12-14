@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>añadir datos a una tabla</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 60%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="agregarFila()">Agregar Fila</button>
+
+    <table id="tabla" border="1">
+      <tr>
+        <th>Columna 1</th>
+        <th>Columna 2</th>
+        <th>Columna 3</th>
+      </tr>
+    </table>
+
+    <script>
+      const todasLasFilas = [
+        ["Elena Nito", "Hector Tuga", "Victor Nillo"],
+        ["Ines Tornudo", "Aitor Menta", "Esteban Quito"],
+        ["Helen Brion", "Elmo Coso", "Debora Cabezas", "Lapis Tola"],
+      ];
+
+      let indiceActual = 0;
+
+      function agregarFila() {
+        let tabla = document.getElementById("tabla");
+        let datosFilaActual =
+          todasLasFilas[indiceActual % todasLasFilas.length];
+        agregarFilaATabla(tabla, datosFilaActual);
+        indiceActual++;
+      }
+
+      function agregarFilaATabla(tabla, datosFila) {
+        let nuevaFila = document.createElement("tr");
+
+        for (let dato of datosFila) {
+          let nuevaCelda = document.createElement("td");
+          let texto = document.createTextNode(dato);
+          nuevaCelda.appendChild(texto);
+          nuevaFila.appendChild(nuevaCelda);
+        }
+
+        tabla.appendChild(nuevaFila);
+      }
+    </script>
+  </body>
+</html>
